@@ -1,0 +1,54 @@
+:root {
+  --background:hsl(0, 0%, 98%);
+  --elements:hsl(0, 0%, 100%);
+  --text:hsl(200, 15%, 8%);
+  --input:hsl(0, 0%, 52%);
+}
+
+.dark {
+  --background:hsl(207, 26%, 17%);
+  --elements:hsl(209, 23%, 22%);
+  --text:hsl(0, 0%, 100%);
+  --input:hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: var(--background);
+}
+
+header {
+  height: 80px;
+  background-color: var(--elements);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 8px 0 var(--input);
+  padding: 0 4%;
+}
+header .darkmode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+header .darkmode img {
+  width: 25px;
+  margin-right: 5px;
+}
+header .darkmode p {
+  font-size: 1.4rem;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+  height: 80px;
+}/*# sourceMappingURL=style.css.map */
