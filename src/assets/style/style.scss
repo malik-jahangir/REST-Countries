@@ -33,9 +33,7 @@ header{
     box-shadow: 0 0 8px 0 var(--input);
     padding: 0 4%;
     
-    .heading{
-        
-    }
+  
     .darkmode{
         
         display: flex;
@@ -57,5 +55,62 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 0 4%;
+    margin: 12px 0;
     height: 80px;
+}
+.search{
+    input{
+        border: none;
+        padding: 15px 25px;
+        width: 280px;
+    }
+}
+.filter{
+.select{
+    width: 200px;
+    // padding: 10px;
+}
+}
+.countries-container{
+    display: flex;
+    flex-wrap: wrap;
+    // align-items: center;
+    justify-content: center;
+    gap: 70px;
+    padding: 0 20px;
+}
+.country{
+    width: max-content;
+    // border: 1px solid red;
+    width: 300px;
+    height: 360px;
+    background-color: var(--elements);
+    margin-bottom: 10px;
+
+}
+.flag{
+    img{
+        width: 300px;
+        height: 180px;
+    }
+}
+.description{
+   
+    padding: 10px 12px;
+    h2{
+        margin-bottom: 8px;
+        font-size: 1.4rem;
+        
+    }
+}
+.dis{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    p{
+        font-weight: bold;
+        .light-text{
+            font-weight: normal;
+        }
+    }
 }

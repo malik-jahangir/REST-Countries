@@ -1,10 +1,11 @@
 import Country from './Country'
-export default function CountriesContainer(){
+export default function CountriesContainer(props){
     return(
+
     <div className="countries-container">
 
-            <Country/>
-            
+            {props.country}
+
     </div>
     )
 }
