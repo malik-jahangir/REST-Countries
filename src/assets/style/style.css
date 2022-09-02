@@ -3,13 +3,15 @@
   --elements:hsl(0, 0%, 100%);
   --text:hsl(200, 15%, 8%);
   --input:hsl(0, 0%, 52%);
+  --shadow:hsla(208, 23%, 22%, 0.319);
 }
 
-.dark {
+.darkmode {
   --background:hsl(207, 26%, 17%);
   --elements:hsl(209, 23%, 22%);
   --text:hsl(0, 0%, 100%);
   --input:hsl(0, 0%, 100%);
+  --shadow:hsl(209, 23%, 22%);
 }
 
 * {
@@ -20,6 +22,7 @@
 body {
   font-family: "Nunito Sans", sans-serif;
   background-color: var(--background);
+  color: var(--text);
 }
 
 header {
@@ -28,21 +31,26 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 0 8px 0 var(--input);
+  box-shadow: 0 0 2px 0 var(--shadow);
   padding: 0 4%;
 }
-header .darkmode {
+header .btn-darkmode {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
-header .darkmode img {
-  width: 25px;
-  margin-right: 5px;
+header .btn-darkmode img {
+  width: 18px;
+  margin-right: 8px;
+  transform: rotate(-23deg);
 }
-header .darkmode p {
-  font-size: 1.4rem;
+header .btn-darkmode p {
+  font-size: 1.1rem;
+}
+
+.heading h1 {
+  font-size: 1.6rem;
 }
 
 .top-bar {
@@ -57,11 +65,53 @@ header .darkmode p {
 .search input {
   border: none;
   padding: 15px 25px;
-  width: 280px;
+  width: 320px;
+  font-size: 0.96rem;
+  background-color: var(--elements);
+  color: var(--input);
+}
+.search input::-moz-placeholder {
+  color: var(--input);
+}
+.search input:-ms-input-placeholder {
+  color: var(--input);
+}
+.search input::placeholder {
+  color: var(--input);
+}
+.search input:hover {
+  border-color: #2684FF;
+}
+.search input:focus {
+  border: 1.2px solid;
+  border-color: #2684FF;
+  border-radius: 4px;
+  outline: none;
 }
 
 .filter .select {
   width: 200px;
+}
+
+.inner-select__control {
+  border-style: none !important;
+  background-color: var(--elements) !important;
+}
+
+.inner-select__single-value {
+  color: var(--input) !important;
+}
+
+.inner-select__input-container {
+  color: var(--input) !important;
+}
+
+.inner-select__menu {
+  background-color: var(--elements) !important;
+}
+
+.inner-select__option:hover {
+  color: black !important;
 }
 
 .countries-container {
@@ -80,6 +130,7 @@ header .darkmode p {
   height: 360px;
   background-color: var(--elements);
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .flag img {
@@ -88,11 +139,11 @@ header .darkmode p {
 }
 
 .description {
-  padding: 10px 12px;
+  padding: 12px 18px;
 }
 .description h2 {
   margin-bottom: 8px;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
 }
 
 .dis {

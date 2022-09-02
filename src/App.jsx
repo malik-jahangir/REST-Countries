@@ -1,3 +1,4 @@
+import React from 'react';
 import './assets/style/style.css'
 import Header from './components/Header'
 import TopBar from './components/TopBar'
@@ -16,7 +17,15 @@ data.map((i)=>{
   capital = {i.capital} 
   />)
 })
-console.log(country)
+// console.log(country)
+const [darkMode, setDarkMode] = React.useState(true)
+
+const toggleDarkMode = ()=>{
+  setDarkMode((prev)=>!prev)
+  document.body.classList.toggle('darkmode')
+}
+
+
 
 
  
@@ -35,7 +44,7 @@ console.log(country)
 
   return (
     <>
-    <Header/>
+    <Header darkMode ={darkMode} toggleDarkMode={toggleDarkMode} />
     <TopBar/>
     <CountriesContainer country ={country} />
        
