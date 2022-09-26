@@ -1,22 +1,33 @@
+import React from 'react'
 import Select from 'react-select'
-export default function TopBar(){
-    const options = [
-        { value: 'region', label: 'Filter by Region' },
-        { value: 'africa', label: 'Africa' },
-        { value: 'america', label: 'America' },
-        { value: 'asia', label: 'Asia' },
-        { value: 'europe', label: 'Europe' },
-        { value: 'oceania', label: 'Oceania' },
-      ]
+export default function TopBar(prop){
+
+      const customStyles = {
+        option: (provided, state) => ({
+          ...provided,
+        //   color: state.isSelected ? ((prop.darkMode?'white':'white')) : '',
+          color: state.isFocused ? 'black' : '',
+        }),
+      }
+
+
 
     return(
 
         <div className="top-bar">
             <div className="search">
-                <input type="text" name="" id="" placeholder="Search for a country..." />
+                <input 
+                onChange={(e)=>{
+                  prop.handelSearch(e)
+
+                }}
+                value={prop.search}
+                type="text" 
+                name="search"
+                 placeholder="Search for a country..." />
             </div>
             <div className="filter">
-            <Select className='select' classNamePrefix='inner-select' options={options} />
+            <Select value={prop.filterValue} onChange={prop.handelChange} defaultValue={prop.filterValue} className='select' styles={customStyles} classNamePrefix='inner-select' options={prop.options} />
             </div>
         </div>
     )

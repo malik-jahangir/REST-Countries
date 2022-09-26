@@ -1,8 +1,10 @@
-
+import {Link} from 'react-router-dom';
 export default function(props){
     
-        
+        // console.log(props)
     return(
+        <Link className='country-link' to={props.name}>
+        
         <div className="country">
             <div className="flag">
                 <img loading="lazy" src={props.flags.png} alt={`${props.name} flag`} />
@@ -15,6 +17,7 @@ export default function(props){
                     <p>Capital: <span className="light-text">{props.capital}</span></p>               
                 </div>
             </div>
-        </div> 
+        </div>
+        </Link>
     )
 }

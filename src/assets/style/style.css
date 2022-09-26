@@ -61,6 +61,14 @@ header .btn-darkmode p {
   margin: 12px 0;
   height: 80px;
 }
+@media only screen and (max-width: 725px) {
+  .top-bar {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
+  }
+}
 
 .search input {
   border: none;
@@ -110,10 +118,6 @@ header .btn-darkmode p {
   background-color: var(--elements) !important;
 }
 
-.inner-select__option:hover {
-  color: black !important;
-}
-
 .countries-container {
   display: flex;
   flex-wrap: wrap;
@@ -156,4 +160,36 @@ header .btn-darkmode p {
 }
 .dis p .light-text {
   font-weight: normal;
+}
+
+.country-link {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.country-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 100px;
+}
+.country-page img {
+  width: 420px;
+}
+
+.country-page-details h1 {
+  margin-bottom: 25px;
+}
+
+.inner-country-details {
+  display: flex;
+  gap: 60px;
+}
+.inner-country-details p {
+  line-height: 36px;
+}
+.inner-country-details .bold {
+  font-weight: 700;
+  margin-right: 2px;
 }/*# sourceMappingURL=style.css.map */
