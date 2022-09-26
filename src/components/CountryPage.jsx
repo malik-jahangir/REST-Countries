@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import CountryDetails from "./CountryDetails";
+import BackButton from "./BackButton";
 export default function (props) {
   const { id } = useParams();
   let country;
@@ -9,9 +9,14 @@ export default function (props) {
     });
 
   return (
+
     <div className="country-page">
+        <BackButton/>
       {country && (
-        <>
+        <div className="inner-country-page">
+
+        
+
           <div className="country-page-flag">
             <img
               loading="lazy"
@@ -62,7 +67,7 @@ export default function (props) {
             </div>
             </div>
           </div>
-        </>
+          </div>
       )}
     </div>
   );

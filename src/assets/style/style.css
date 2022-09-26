@@ -48,6 +48,11 @@ header .btn-darkmode img {
 header .btn-darkmode p {
   font-size: 1.1rem;
 }
+@media only screen and (max-width: 430px) {
+  header .btn-darkmode p {
+    display: none;
+  }
+}
 
 .heading h1 {
   font-size: 1.6rem;
@@ -66,7 +71,7 @@ header .btn-darkmode p {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
-    margin: 20px auto;
+    margin: 40px auto;
   }
 }
 
@@ -77,6 +82,12 @@ header .btn-darkmode p {
   font-size: 0.96rem;
   background-color: var(--elements);
   color: var(--input);
+}
+@media only screen and (max-width: 420px) {
+  .search input {
+    width: 70vw;
+    margin: auto;
+  }
 }
 .search input::-moz-placeholder {
   color: var(--input);
@@ -168,14 +179,44 @@ header .btn-darkmode p {
 }
 
 .country-page {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+}
+@media only screen and (max-width: 1230px) {
+  .country-page {
+    width: 90%;
+    margin: auto;
+    margin-top: 40px;
+  }
+}
+
+.inner-country-page {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 80px;
-  margin-top: 100px;
+  margin-top: 10vh;
 }
-.country-page img {
+@media only screen and (max-width: 1120px) {
+  .inner-country-page {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .inner-country-page {
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+  }
+}
+.inner-country-page img {
   width: 420px;
+}
+@media only screen and (max-width: 460px) {
+  .inner-country-page img {
+    width: 95vw;
+  }
 }
 
 .country-page-details h1 {
@@ -186,10 +227,30 @@ header .btn-darkmode p {
   display: flex;
   gap: 60px;
 }
+@media only screen and (max-width: 620px) {
+  .inner-country-details {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 .inner-country-details p {
   line-height: 36px;
 }
 .inner-country-details .bold {
   font-weight: 700;
   margin-right: 2px;
+}
+
+.back-button {
+  color: var(--text);
+  background-color: var(--background);
+  padding: 8px 22px;
+  border: 1px solid;
+  border-color: var(--background);
+  border-radius: 4px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.back-button:hover {
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
 }/*# sourceMappingURL=style.css.map */
